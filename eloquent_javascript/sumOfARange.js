@@ -1,6 +1,6 @@
-var range = function(start, end) {
+var range = function(start, end, step = 1) {
   var numbers = [];
-  for (var i = start; i <= end; i++) {
+  for (var i = start; i <= end; i += step) {
     numbers.push(i);
   }
   return(numbers);
