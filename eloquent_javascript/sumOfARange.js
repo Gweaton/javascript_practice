@@ -1,15 +1,21 @@
-var range = function(start, end, step = 1) {
-  var numbers = [];
-  for (var i = start; i <= end; i += step) {
-    numbers.push(i);
+function range(start, end, step = 1) {
+  var result = [];
+  if (step > 0) {
+    for (i = start; i <= end; i += step) {
+      result.push(i)
+    }
+  } else {
+    for (i = start; i >= end; i += step) {
+      result.push(i)
+    }
   }
-  return(numbers);
+  return result;
 }
 
-var sum = function(array) {
-  var total = 0;
-  for (var i = 0; i < array.length; i++) {
-    total += array[i];
+function sum(array) {
+  var result = 0;
+  for (i = 0; i < array.length; i++) {
+    result += array[i];
   }
-  return(total);
+  return result;
 }
