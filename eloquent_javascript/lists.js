@@ -18,3 +18,11 @@ function prepend(element, list) {
   var newList = { value: element, rest: list}
   return newList;
 }
+
+function nth(list, number) {
+  if (number === 0) {
+    return list.value;
+  } else {
+    return nth(list.rest, number - 1)
+  }
+}
