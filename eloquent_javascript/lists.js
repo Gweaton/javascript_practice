@@ -13,3 +13,8 @@ function listToArray(list) {
   }
   return array;
 }
+
+function prepend(element, list) {
+  var newList = { value: element, rest: list}
+  return newList;
+}
